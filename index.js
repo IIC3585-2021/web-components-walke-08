@@ -11,6 +11,7 @@ template.innerHTML = /*html*/ `
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
+    display: inline-block;
   }
 
   img{
