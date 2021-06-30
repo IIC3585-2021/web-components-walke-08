@@ -90,28 +90,28 @@ const items = [
     product: "Bicicleta",
     imageUrl:
       "https://www.bicigo.cl/image/md/1516/decb50ecb507c572c58199d75a6e7f0288775d1e.png",
-    price: "699.90",
-    oldPrice: "545.50",
-    discount: "40%",
-    rating: "4.3",
+    price: "750.98",
+    oldPrice: "850.99",
+    discount: "15%",
+    rating: "4.8",
   },
   {
     product: "GeForce RTX 2080",
     imageUrl:
       "https://hardzone.es/app/uploads-hardzone.es/2018/09/NVIDIA-GeForce-RTX-2080-Ti-01-1-1024x536.jpg",
-    price: "699.90",
-    oldPrice: "545.50",
-    discount: "40%",
-    rating: "4.3",
+    price: "1080.99",
+    oldPrice: "1199.90",
+    discount: "10%",
+    rating: "4.8",
   },
   {
     product: "Ben 10",
     imageUrl:
       "https://www.latercera.com/resizer/-KKfN4gEijYxrsa2CHoIuJXXYkM=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/2WOC7NILVVA7BLWQAJVZAKNDCM.png",
-    price: "699.90",
-    oldPrice: "545.50",
-    discount: "40%",
-    rating: "4.3",
+    price: "1000.00",
+    oldPrice: "100.00",
+    discount: "-1000%",
+    rating: "5",
   },
 ];
 
