@@ -15,7 +15,7 @@ template.innerHTML = /*html*/ `
   }
 
   img{
-    height: 210px;
+    height: 190px;
     width: calc(100% - 2px);
     margin: 1px;
     border-radius: 5px;
@@ -54,7 +54,7 @@ template.innerHTML = /*html*/ `
     color: gold;
   }
 
-  .old-price {
+  #old-price {
     color: #444;
     font-size: 0.9em;
     text-decoration: line-through;
@@ -64,21 +64,29 @@ template.innerHTML = /*html*/ `
   .price-info {
     margin-bottom: 5px;
   }
+
+  #discount {
+    padding: 0;
+    margin: 0;
+  }
+
 </style>
 
 <div class='sell-item'>
   <div class="container">
     <img src="" alt="">
-    <div class="top-left">-40%</div>
+    <div class="top-left">
+    -<span id="discount">40%</span>
+    </div>
   </div>
-  <h2>product</h2>
+  <slot class="slot">product</slot>
   <div class="star-container">
     <span class="star">&#9733;</span>
-    4.5
+    <span id="rating">4.5</span>
   </div>
   <div class='price-info'>
-    <span class="price">$15.25</span>
-    <span class="old-price">$20.99</span>
+    <span id="price">$15.25</span>
+    <span id="old-price">$20.99</span>
   </div>
 </div>
 `;
@@ -97,7 +105,7 @@ class SellItem extends HTMLElement {
       "price",
       "discount",
       "rating",
-      "discount-rate",
+      "old-price",
     ];
   }
 
@@ -112,7 +120,8 @@ class SellItem extends HTMLElement {
     "image-url": this.changeAttr("src").bind(this, "img"),
     price: this.changeAttr().bind(this, "#price"),
     rating: this.changeAttr().bind(this, "#rating"),
-    discount: this.changeAttr().bind(this, "h4"),
+    discount: this.changeAttr().bind(this, "#discount"),
+    "old-price": this.changeAttr().bind(this, "#old-price"),
   };
 
   attributeChangedCallback(name, oldValue, newValue) {
